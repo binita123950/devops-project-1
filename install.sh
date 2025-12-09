@@ -8,8 +8,9 @@ then
 	echo "The package apache2 is already installed"
 else
 	echo "apache2 is not installed, installing it..."
+	apt install -y apache2	
 fi	
-apt install -y apache2
+
 sudo systemctl start apache2
 sudo systemctl enable apache2
 sudo systemctl status apache2
